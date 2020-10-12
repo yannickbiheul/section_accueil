@@ -24,6 +24,7 @@ html, body {
     height: 40px;
     /* border: 1px solid #fff; */
     cursor: pointer;
+    display: none;
 }
 
 .ligne {
@@ -200,6 +201,10 @@ nav a:hover {
 /* ---------- RESPONSIVE DESIGN ---------- */
 
 @media screen and (max-width: 500px) {
+    .boutonBurger {
+        display: flex;
+    }
+    
     header {
         display: none;
     }
