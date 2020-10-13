@@ -25,6 +25,7 @@ html, body {
     /* border: 1px solid #fff; */
     cursor: pointer;
     display: none;
+    z-index: 50;
 }
 
 .ligne {
@@ -75,6 +76,32 @@ html, body {
     bottom: 0;
     transform: rotate(-45deg);
     transition: bottom 300ms ease, transform 300ms 300ms ease;
+}
+
+.menuBurger {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to right, #004e92, #000428);
+    color: #fff;
+    z-index: 40;
+    left: -100vw;
+    transition-duration: 0.5s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menuBurger a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 2rem;
+    margin: 1rem 0 1rem 0;
+}
+
+.menuBurgerOpen {
+    left: 0;
 }
 
 
