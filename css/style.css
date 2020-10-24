@@ -129,6 +129,11 @@ header {
     text-decoration: none;
     color: #f1f1f1;
     font-size: 3rem;
+    opacity: 0.8;
+}
+
+.header1 a:hover {
+    opacity: 1;
 }
 
 .header2 {
@@ -140,6 +145,11 @@ header {
     color: #f1f1f1;
     margin: 0 10px 0 10px;
     font-size: 2rem;
+    opacity: 0.8;
+}
+
+.header2 a:hover {
+    opacity: 1;
 }
 
 @media screen and (max-width: 800px) {
@@ -177,59 +187,52 @@ nav a:hover {
     width: 100%;
     height: 100vh;
     background: linear-gradient(to right, #000428, #004e92); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
 }
 
 .titre {
-    /* border: 1px solid #fff; */
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    border: 1px solid #fff;
+    grid-column: 2 / span 6;
+    grid-row: 4 / span 6;
     width: 85%;
+    min-width: 30rem;
     height: 75%;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
 }
 
 /* ----- TITRE ----- */
 
 .titre h1 {
-    grid-column: 2 / span 2;
-    grid-row: 2 / span 1;
+    border: 1px solid #fff;
     text-align: center;
     color: #fff;
     font-size: 7rem;
     text-shadow: -4px 4px 4px #000;
+    width: 95%;
 }
 
 /* ----- PARAGRAPHE ----- */
 
 .titre p {
-    grid-column: 2 / span 2;
-    grid-row: 3 / span 1;
-    text-align: center;
+    border: 1px solid #fff;
     color: #fff;
     font-size: 2rem;
     position: relative;
-    bottom: 4rem;
+    bottom: 5rem;
 }
 
 /* ----- BOUTON ----- */
 
 .boutons {
-    grid-column: 2 / span 2;
-    grid-row: 4 / span 1;
-    /* border: 1px solid #fff; */
-    width: 15rem;
-    height: 5rem;
-    margin: auto;
+    border: 1px solid #fff;
+    padding: 1rem;
     position: relative;
-    bottom: 10rem;
+    bottom: 5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -246,11 +249,6 @@ nav a:hover {
     font-family: 'Roboto', sans-serif;
     font-size: 1.5rem;
     outline: none;
-}
-
-.boutons button:hover {
-    padding: 2.2rem;
-    font-size: 1.6rem;
 }
 
 
